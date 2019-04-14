@@ -1,6 +1,6 @@
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
-function myFunction() {
+function drop() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
@@ -15,5 +15,24 @@ window.onclick = function(event) {
         openDropdown.classList.remove('show');
         }
     }
+    }
+}
+
+function submit() {
+    var x = document.getElementById("frm1");
+    var text = "";
+    var i;
+    for (i = 0; i < x.length ;i++) {
+      text += x.elements[i].value + "<br>";
+    }
+    document.getElementById("demo").innerHTML = text;
+    document.getElementById("frm1").reset();
+  }
+ 
+  function timerIncrement() {
+    idleTime = idleTime + 1;
+    if (idleTime > 5) { // 5 minutes
+        window.alert("Hello there! Are you okay?");
+        window.location.reload();
     }
 }

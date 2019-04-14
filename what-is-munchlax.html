@@ -9,7 +9,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <link href="css/core.css" rel="stylesheet">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+       <script src="js/script.js"></script>
+       <script type="text/javascript">
+        var idleTime = 0;
+        $(document).ready(function () {
+            //Increment the idle time counter every minute.
+            var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
+        
+            //Zero the idle timer on mouse movement.
+            $(this).mousemove(function (e) {
+                idleTime = 0;
+            });
+            $(this).keypress(function (e) {
+                idleTime = 0;
+            });
+        });
+        </script>
     </head>
     <body>
         <div class="icon-bar">
@@ -27,7 +43,7 @@
           <a href="about.html">About</a>
           <a href="schedule.html">Schedule</a>
           <div class="dropdown active">
-              <button class="dropbtn" onclick="myFunction()">Posts
+              <button class="dropbtn" onclick="drop()">Posts
                 <i class="fa fa-caret-down"></i>
               </button>
               <div class="dropdown-content" id="myDropdown">
@@ -39,8 +55,6 @@
           <a href="home.html">Home</a>
 
         </div>
-
-        <script src="js/script.js"></script>
 
         <div style="padding-left: 5%; padding-right:5%">
             <div>
@@ -83,6 +97,34 @@
                     <li>Munchlax's evolution family is the only one to have all of its members appear from a Poké Ball within a single Super Smash Bros. game.</li>
                     <li>In Super Smash Bros. Brawl, Munchlax's trophy information states it first appeared in Diamond and Pearl instead of Pokémon Dash. This is a similar case with Bonsly and Togepi.</li>
                 </ul>
+            </div>
+            <hr>
+            <div class="forms">
+                <h3>What's your opinion?</h3>
+                <form id="frm1">
+                    <table>
+                        <tr>
+                            <td>Name</td>
+                            <td>: </td>
+                            <td><input type="text" name="fname"></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>: </td>
+                            <td><input type="text" name="lname"></td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top">Comment</td>
+                            <td style="vertical-align: top">: </td>
+                            <td><textarea rows="5" cols="30"></textarea></td>
+                        </tr>
+                </table>
+                </form> 
+                
+                <button class="subbut" onclick="submit()">Submit</button>
+                <h3>Your Opinion</h3>
+                <hr>
+                <p id="demo"></p>
             </div>
         </div>
         <footer>
