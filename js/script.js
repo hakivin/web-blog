@@ -28,10 +28,24 @@ function submit() {
     document.getElementById("demo").innerHTML = text;
     document.getElementById("frm1").reset();
   }
- 
+  
+  var idleTime = 0;
+        $(document).ready(function () {
+            //Increment the idle time counter every sec.
+            var idleInterval = setInterval(timerIncrement, 1000); // 1 sec
+        
+            //Zero the idle timer on mouse movement.
+            $(this).mousemove(function (e) {
+                idleTime = 0;
+            });
+            $(this).keypress(function (e) {
+                idleTime = 0;
+            });
+        });
+
   function timerIncrement() {
     idleTime = idleTime + 1;
-    if (idleTime > 5) { // 5 minutes
+    if (idleTime > 30) { // 30s
         window.alert("Hello there! Are you okay?");
         window.location.reload();
     }
