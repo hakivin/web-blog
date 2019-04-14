@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome To My Blog</title>
+          <meta charset="UTF-8">
+          <link rel="shortcut icon" href="img/favicon.ico" />
+          <meta name="description" content="Tugas Pemrograman Web: Membuat blog">
+          <meta name="author" content="Hakikid Amana">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link href="css/core.css" rel="stylesheet">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+              <script>
+                  $(document).ready(function(){
+                      $(".welcome").fadeIn(2000);
+                      $(".image").fadeIn(3000);
+                      $(".quote").fadeIn(4000);
+                  });
+                  </script> 
+      </head>
+    <body>
+        <div class="icon-bar">
+            <a href="https://www.facebook.com/hamathegreat" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a> 
+            <a href="https://twitter.com/Hakikid1" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a> 
+            <a href="https://www.instagram.com/hakivin/" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a> 
+            <a href="https://www.linkedin.com/in/hakivin/" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/channel/UCTtYdXHW2SaZIQX47NCbkaw" target="_blank" class="youtube"><i class="fa fa-youtube"></i></a> 
+          </div>
+        <div class="header">
+        <h1>The Sleepy Munchlax</h1>
+        </div>
+        <div class="navbar">
+          <a href="about.html">About</a>
+          <div class="dropdown">
+              <button class="dropbtn" onclick="myFunction()">Posts
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content" id="myDropdown">
+                <a href="#">Post 1</a>
+                <a href="#">Post 2</a>
+                <a href="#">Post 3</a>
+              </div>
+              </div>
+              <a href="#news">Schedule</a>
+          <a class="active" href="#home">Home</a>
+
+        </div>
+        
+        <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+        
+        <div>
+          <h2 class="welcome">Welcome to my blog</h2>
+        </div>
+        <div>
+          <img class="image" src="img/me.jpeg" alt="my pic">
+          <p class="quote">“love is undying, of that I feel certain. I mean deep, abiding, cherishing love. The love that gives protection even as you, my guardian angel, gave me protection long after you had gone-and continue to give this very day...
+              A love beyond Death-a love that makes Life alive!” 
+              <br><br> Ruskin Bond, Scenes from a Writer's Life</p>
+        </div>      
+        
+        <footer>
+          <p>© 2019 · Hakikid Amana</p>
+        </footer>    
+    </body>
+</html>
