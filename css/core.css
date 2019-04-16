@@ -147,6 +147,10 @@ body {
   padding: 5px 10px 5px 10px ;
 }
 
+.frm1 input {
+  font-size: 22px;
+}
+
 footer {
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;

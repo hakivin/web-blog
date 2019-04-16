@@ -25,7 +25,7 @@ function submit() {
     for (i = 0; i < x.length ;i++) {
       text += x.elements[i].value + "<br>";
     }
-    document.getElementById("demo").innerHTML = text;
+    document.getElementById("demo").innerHTML += text + "<hr>";
     document.getElementById("frm1").reset();
   }
   
@@ -38,7 +38,7 @@ function submit() {
             $(this).mousemove(function (e) {
                 idleTime = 0;
             });
-            $(this).keypress(function (e) {
+            $(this).keydown(function (e) {
                 idleTime = 0;
             });
         });
