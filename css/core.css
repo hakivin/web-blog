@@ -81,6 +81,11 @@ body {
   color: #111;
 }
 
+#portfolio img {
+  width: 70%;
+  text-align: center;
+}
+
 .show {
   display: block;
 }
