@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>My Hobby - Hakikid Amana</title>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="img/favicon.ico" />
+        <meta name="description" content="Tugas Pemrograman Web: Membuat blog">
+        <meta name="author" content="Hakikid Amana">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link href="css/core.css" rel="stylesheet">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+       <script src="js/script.js"></script>
+    </head>
+    <body>
+        <div class="icon-bar">
+            <a href="https://www.facebook.com/hamathegreat" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a> 
+            <a href="https://twitter.com/Hakikid1" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a> 
+            <a href="https://www.instagram.com/hakivin/" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a> 
+            <a href="https://www.linkedin.com/in/hakivin/" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/channel/UCTtYdXHW2SaZIQX47NCbkaw" target="_blank" class="youtube"><i class="fa fa-youtube"></i></a> 
+          </div>
+
+        <div class="header">
+        <h1>The Sleepy Munchlax</h1>
+        </div>
+        <div class="navbar">
+          <a href="about.html">About</a>
+          <a href="schedule.html">Schedule</a>
+          <div class="dropdown active">
+              <button class="dropbtn" onclick="drop()">Posts
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content" id="myDropdown">
+                <a href="what-is-munchlax.html">What is Munchlax?</a>
+                <a href="#">My Hobby</a>
+                <a href="#">Post 3</a>
+              </div>
+              </div>
+          <a href="home.html">Home</a>
+
+        </div>
+
+        <div style="padding-left: 15%; padding-right:15%">
+            <div>
+            <h2 style="margin: 100px 100px 10px 5%">About My Hobby</h2>
+            </div>
+
+            <div class="header" style="padding-top:30px">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/tLiqwzpO-iw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </video></div>
+            
+            <div>
+                <p>One of my hobbies is playing piano. I started playing piano when I was a kid. When I was 8th grade, my parents registered me in piano course, Purwacaraka. But after 3 years I dropped my piano lesson and started focusing my study.</div>
+
+            <div>
+                <p> There are various reasons how it can benefit us from learning to play the piano.</p>
+                <ol>
+                    <li>It gives you happiness. Did you know that research has found that music brings us happiness? It is like our central to our lives. Why not give yourself a chance to learn to play the piano because music can give us an emotional and creative outlet.</li>
+                    <li>Playing the music instrument is such a great source of satisfaction. I know playing the piano is hard as a beginner. However, when you finally managed to play a song at ease, it will provide you a deep sense of satisfaction. It is a great source of pleasure and fulfillment if you ask me.</li>
+                    <li>You can play the piano by yourself. As for other musical instruments such as clarinet and violin which only produce one line. As a result, you will always need an accompaniment. Therefore, playing the piano can be a better option as you can play it solo that provides both melody and harmony.</li>
+                    <li>It is also possible that you can make coherent sounds by playing the piano. This is because it has ready-made pitches.</li>
+                    <li>You need to be coordinate to play the piano. In general, you have to learn to multi-task. I understand this can be hard but it is really good to develop our mental skills and focus. I realize that after playing the piano for more than 3 months. My mind has became a lot sharper and I can do things more efficiently.</li>
+                    <li>It is proven that both children and grown-ups that are involved in musical related activities are usually happier and more sociable as compared to those who do not.</li>
+                </ol> 
+            </div>
+            <hr>
+            <div class="forms">
+                <h3>What's your opinion?</h3>
+                <form id="frm1">
+                    <table>
+                        <tr>
+                            <td>Name</td>
+                            <td>: </td>
+                            <td><input type="text" name="fname"></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>: </td>
+                            <td><input type="email" name="lname"></td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top">Comment</td>
+                            <td style="vertical-align: top">: </td>
+                            <td><textarea rows="5" cols="50"></textarea></td>
+                        </tr>
+                </table>
+                </form> 
+                <button class="subbut" onclick="submit()">Submit</button>
+                <h3>Your Opinion</h3>
+                <hr>
+                <p id="demo"></p>
+            </div>
+        </div>
+        <footer>
+          <p>© 2019 · Hakikid Amana</p>
+        </footer>    
+    </body>
+</html>

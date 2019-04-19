@@ -22,11 +22,25 @@ function submit() {
     var x = document.getElementById("frm1");
     var text = "";
     var i;
-    for (i = 0; i < x.length ;i++) {
-      text += x.elements[i].value + "<br>";
+    let name = x.elements[0].value;
+    let email = x.elements[1].value;
+    var comment = x.elements[2].value;
+
+    var passed = true;
+
+    if (passed === true && name.length < 4) passed = 'Name require 4 character at minimum to input!';
+    if (passed === true && comment.length < 6) passed = 'Comment require 6 character to input!';
+    if (passed === true && /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email) == false) passed = 'Please input a valid email!';
+
+    if (passed === true) {
+        for (i = 0; i < x.length ;i++) {
+            text += x.elements[i].value + "<br>";
+        }
+        document.getElementById("demo").innerHTML += text + "<hr>";
+        document.getElementById("frm1").reset();
+    } else {
+        alert(passed); return false;
     }
-    document.getElementById("demo").innerHTML += text + "<hr>";
-    document.getElementById("frm1").reset();
   }
   
   var idleTime = 0;
@@ -47,6 +61,6 @@ function submit() {
     idleTime = idleTime + 1;
     if (idleTime > 30) { // 30s
         window.alert("Hello there! Are you okay?");
-        window.location.reload();
+        //window.location.reload();
     }
 }
